@@ -1,0 +1,14 @@
+D:\Ders İçerik\.net WEb\hafta2\ornek5\bin\Debug\net8.0\Ornek5.exe
+D:\Ders İçerik\.net WEb\hafta2\ornek5\bin\Debug\net8.0\Ornek5.deps.json
+D:\Ders İçerik\.net WEb\hafta2\ornek5\bin\Debug\net8.0\Ornek5.runtimeconfig.json
+D:\Ders İçerik\.net WEb\hafta2\ornek5\bin\Debug\net8.0\Ornek5.dll
+D:\Ders İçerik\.net WEb\hafta2\ornek5\bin\Debug\net8.0\Ornek5.pdb
+D:\Ders İçerik\.net WEb\hafta2\ornek5\obj\Debug\net8.0\Ornek5.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ders İçerik\.net WEb\hafta2\ornek5\obj\Debug\net8.0\Ornek5.AssemblyInfoInputs.cache
+D:\Ders İçerik\.net WEb\hafta2\ornek5\obj\Debug\net8.0\Ornek5.AssemblyInfo.cs
+D:\Ders İçerik\.net WEb\hafta2\ornek5\obj\Debug\net8.0\Ornek5.csproj.CoreCompileInputs.cache
+D:\Ders İçerik\.net WEb\hafta2\ornek5\obj\Debug\net8.0\Ornek5.dll
+D:\Ders İçerik\.net WEb\hafta2\ornek5\obj\Debug\net8.0\refint\Ornek5.dll
+D:\Ders İçerik\.net WEb\hafta2\ornek5\obj\Debug\net8.0\Ornek5.pdb
+D:\Ders İçerik\.net WEb\hafta2\ornek5\obj\Debug\net8.0\Ornek5.genruntimeconfig.cache
+D:\Ders İçerik\.net WEb\hafta2\ornek5\obj\Debug\net8.0\ref\Ornek5.dll
