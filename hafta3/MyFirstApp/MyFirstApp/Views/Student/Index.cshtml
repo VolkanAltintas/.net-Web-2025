@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = "Öğrenciler - Ana Sayfa";
+}
+<h1>@ViewBag.Title</h1>
+<p>Bu sayfada öğrenci işlemleri için menüye bakabilirsin.</p>
+
+<ul>
+    <li><a asp-controller="Student" asp-action="List">Listeyi Gör</a></li>
+    <li><a asp-controller="Student" asp-action="Detail" asp-route-name="Ayşe Yılmaz">Ayşe Detay</a></li>
+</ul>

@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Öğrenciler - Liste";
+    var students = ViewBag.Students as List<string> ?? new List<string>();
+}
+<h1>Öğrenci Listesi</h1>
+
+@if (students.Count == 0)
+{
+    <p>Liste boş.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr><th>#</th><th>Ad Soyad</th><th>İşlemler</th></tr>
+        </thead>
+        <tbody>
+        @for (int i = 0; i < students.Count; i++)
+        {
+            var s = students[i];
+            <tr>
+                <td>@(i+1)</td>
+                <td>@s</td>
+                <td>
+                    <a asp-controller="Student" asp-action="Detail" asp-route-name="@s">Detay</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
