@@ -1,0 +1,38 @@
+@model List<StudentModel>
+@{
+    ViewData["Title"] = "Student List";
+    var success = ViewBag.Success as string;
+}
+
+<h1>Student List</h1>
+
+@if (!string.IsNullOrWhiteSpace(success))
+{
+    <div class="alert alert-success">@success</div>
+}
+
+@if (Model is null || Model.Count == 0)
+{
+    <p>No records yet.</p>
+    <p><a asp-controller="Student" asp-action="Register" class="btn btn-primary">Create New</a></p>
+}
+else
+{
+    <p><a asp-controller="Student" asp-action="Register" class="btn btn-primary">Create New</a></p>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr><th>Name</th><th>Age</th><th>Email</th><th>Enroll Date</th></tr>
+        </thead>
+        <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Name</td>
+                <td>@(s.Age?.ToString() ?? "-")</td>
+                <td>@s.Email</td>
+                <td>@(s.EnrollDate?.ToString("yyyy-MM-dd") ?? "-")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,49 @@
+@model MaterialModel
+@{
+    ViewData["Title"] = "Add Material";
+}
+
+<h1>Add New Material</h1>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<form asp-controller="Material" asp-action="Create" method="post" class="row g-3">
+    <div class="col-md-6">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-3">
+        <label asp-for="Quantity" class="form-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-3">
+        <label asp-for="UnitPrice" class="form-label"></label>
+        <input asp-for="UnitPrice" class="form-control" />
+        <span asp-validation-for="UnitPrice" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="Supplier" class="form-label"></label>
+        <input asp-for="Supplier" class="form-control" />
+        <span asp-validation-for="Supplier" class="text-danger"></span>
+    </div>
+
+    <div class="col-md-6">
+        <label asp-for="PurchaseDate" class="form-label"></label>
+        <input asp-for="PurchaseDate" class="form-control" />
+        <span asp-validation-for="PurchaseDate" class="text-danger"></span>
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-success">Add</button>
+        <a asp-controller="Material" asp-action="List" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

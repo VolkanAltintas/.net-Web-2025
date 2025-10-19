@@ -1,0 +1,56 @@
+@model List<MaterialModel>
+@{
+    ViewData["Title"] = "Material List";
+    var success = ViewBag.Success as string;
+}
+
+<h1>Material List</h1>
+
+@if (!string.IsNullOrWhiteSpace(success))
+{
+    <div class="alert alert-success">@success</div>
+}
+
+@if (Model == null || Model.Count == 0)
+{
+    <p>No materials found.</p>
+    <a asp-controller="Material" asp-action="Create" class="btn btn-primary">Add New Material</a>
+}
+else
+{
+    <a asp-controller="Material" asp-action="Create" class="btn btn-primary mb-3">Add New Material</a>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Supplier</th>
+                <th>Purchase Date</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>@m.Id</td>
+                <td>@m.Name</td>
+                <td>@m.Quantity</td>
+                <td>@m.UnitPrice.ToString("C")</td>
+                <td>@m.Supplier</td>
+                <td>@(m.PurchaseDate?.ToString("yyyy-MM-dd") ?? "-")</td>
+                <td>@(m.Quantity * m.UnitPrice)</td>
+                <td>
+                    <form asp-action="Delete" asp-controller="Material" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@m.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Delete this material?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
